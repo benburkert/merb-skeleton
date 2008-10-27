@@ -1,0 +1,38 @@
+// Common Stylesheets across your application goes here.
+
+// same rules as fieldset
+.fieldset
+  padding: 1.4em
+  margin:  0 0 1.5em 0
+  border:  1px solid #ccc
+
+// same rules as legend
+.legend
+  font-weight: bold
+  font-size:   1.2em
+
+// same rules as label
+.label
+  font-weight: bold
+
+.label,
+label
+  display: block
+
+  \:after
+    content: ':'
+
+// same rules as input.password
+input.password
+  margin:  0.5em 0
+  border:  1px solid #bbb
+  width:   300px
+  padding: 5px
+
+  \:focus
+    border: 1px solid #666
+
+input#openid_url,
+input.openid_url
+  :background = url("icons/openid-16x16.png") no-repeat 5px !important
+  padding-left: 25px !important

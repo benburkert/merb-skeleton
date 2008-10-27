@@ -1,0 +1,6 @@
+- @title = "Edit User #{@user.id}"
+
+!= form_for @user, :action => resource(@user) do
+  != partial :form, :title => 'Details', :button_text => 'Update'
+
+!= link_to 'Cancel', resource(@user)

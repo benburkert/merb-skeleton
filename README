@@ -1,0 +1,21 @@
+merb-skeleton
+-------------
+
+TRACK/CLONE GIT PROJECT AT YOUR OWN RISK.  WILL BE FORCE PUSHING CHANGES
+UNTIL HAPPY WITH ALL THE DEFAULTS.
+
+This is a merb application set up exactly how I like my apps, and
+includes Password, OpenID and Basic authentication approaches.
+
+More Details to come.
+
+Features
+--------
+
+- High YSlow score out of the box (95%)
+- Uses Compass SASS CSS framework and Blueprint CSS
+- Authentication with Password Form, OpenID and HTTP Basic Auth
+- 1:2.49 code to spec ratio, with 100% coverage
+- Uses YUI Compressor to compress CSS/JS on initial request
+- Uses Rack::Deflate in development mode to gzip/deflate content
+- Uses Rack::Cache to cache output if possible

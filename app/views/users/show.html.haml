@@ -1,0 +1,19 @@
+- @title = "User #{@user.id}"
+
+%div.fieldset
+  %span.legend= 'Details'
+
+  %div
+    %span.label=     'Name'
+    %span#user_name= @user.name
+
+  %div
+    %span.label=      'Email'
+    %span#user_email= @user.email
+
+  - unless @user.openid_url.blank?
+    %div
+      %span.label=           'OpenID'
+      %span#user_openid_url= @user.openid_url
+
+!= link_to 'Edit', resource(@user, :edit)

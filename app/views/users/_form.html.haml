@@ -1,0 +1,14 @@
+!= error_messages_for @user
+
+%fieldset.vcard
+  %legend!= title
+
+  %div!= text_field     :name,                  :label => 'Name',             :class => 'fn'
+  %div!= text_field     :email,                 :label => 'Email',            :class => 'email'
+  %div!= password_field :password,              :label => 'Password'
+  %div!= password_field :password_confirmation, :label => 'Confirm Password'
+
+  - unless @user.new_record?
+    %div!= text_field :openid_url, :label => 'OpenID', :class => 'openid_url'
+
+  %div!= submit button_text

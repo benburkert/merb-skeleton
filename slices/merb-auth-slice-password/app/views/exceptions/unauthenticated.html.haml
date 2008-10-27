@@ -1,0 +1,15 @@
+- @title = 'Login'
+
+!= form :action => slice_url(:merb_auth_slice_password, :perform_login), :method => :put do
+  != error_messages_for session.authentication
+
+  %fieldset
+    %legend= 'Login with an email and password'
+
+    %div!= text_field     :id => login_param,    :name => login_param,    :label => login_param.to_s.capitalize
+    %div!= password_field :id => password_param, :name => password_param, :label => password_param.to_s.capitalize
+    %div!= submit 'Log In'
+
+!= partial 'open_id/login_form', :title => 'Login with OpenID', :button_text => 'Log In'
+
+!= link_to 'Back', url(:home)

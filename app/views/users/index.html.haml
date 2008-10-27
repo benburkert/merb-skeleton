@@ -1,0 +1,25 @@
+- @title = 'Users'
+
+%table{:summary => 'A list of all users', :cellspacing => 0}
+  %thead
+    %tr
+      %th.id{:scope => 'col'}=               'ID'
+      %th.name{:scope => 'col'}=             'Name'
+      %th.email{:scope => 'col'}=            'Email'
+      %th.openid_url{:scope => 'col'}=       'OpenID'
+      %th{:scope => 'col', :colspan => '3'}= 'Actions'
+
+  - for user in @users
+    %tr.vcard{:id => "user-#{user.id}"}
+      %td.id=                       user.id
+      %td.name.fn{:scope => 'row'}= user.name
+      %td.email
+        %a.email{:href => "mailto:#{user.name} <#{user.email}>"}= user.email
+      %td.openid_url
+        %a{:href => user.openid_url}= user.openid_url
+
+      %td!= link_to 'Show', resource(user)
+      %td!= link_to 'Edit', resource(user, :edit)
+      %td!= delete_button user, "Delete #{user.email}"
+
+!= link_to 'New', resource(:users, :new)
