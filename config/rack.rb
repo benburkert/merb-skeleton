@@ -18,9 +18,9 @@ use Rack::Cache do
 end
 
 # Compress output when in development mode
-if Merb.environment == 'development'
-  use Rack::Deflater
-end
+#if Merb.environment == 'development'
+#  use Rack::Deflater
+#end
 
 # use PathPrefix Middleware if :path_prefix is set in Merb::Config
 if prefix = ::Merb::Config[:path_prefix]
