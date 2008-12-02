@@ -1,6 +1,8 @@
 class Application < Merb::Controller
   BEFORE_OPTIONS = [ :only, :exclude ].freeze
 
+  override! :_call_action
+
   def self.cache_for(ttl, options = {})
     filter_options = options.only(*BEFORE_OPTIONS)
     cache_option   = options.except(*BEFORE_OPTIONS)
