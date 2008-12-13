@@ -12,7 +12,7 @@ Merb::Config.use do |c|
 
   # cookie session store configuration
   c[:session_secret_key]  = '74f67880b1a8fbc8301961c20b4612225636f085'  # required for cookie session store
-  # c[:session_id_key] = '_session_id' # cookie session id key, defaults to "_session_id"
+  c[:session_id_key] = '_merb-skeleton_session_id' # cookie session id key, defaults to "_session_id"
 
   c[:compass] = {
     :stylesheets          => 'app/stylesheets',
