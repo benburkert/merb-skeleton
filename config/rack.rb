@@ -36,7 +36,7 @@ merb =  Merb::Rack::Application.new
 
 hapong = lambda do |env|
   if env["REQUEST_METHOD"] == "OPTIONS" && env["REQUEST_URI"] == "/"
-    [200, {}, "PONG!\n"]
+    [200, {'ALLOW' => 'GET'}, Merb.environment == 'development' ? "PONG!\n" : ""]
   else
     [404, {}, "No PONG! here, move along"]
   end
